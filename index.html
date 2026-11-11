@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OMNINX SEARCH</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #ffffff;
+    color: #111111;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 650px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin: 12px 0 35px;
+    color: #666666;
+}
+
+.search-box {
+    display: flex;
+    border: 1px solid #cccccc;
+    border-radius: 30px;
+    padding: 6px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    padding: 14px;
+    font-size: 16px;
+    background: transparent;
+}
+
+button {
+    border: none;
+    border-radius: 25px;
+    background: #111111;
+    color: white;
+    padding: 0 22px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #333333;
+}
+
+.note {
+    margin-top: 25px;
+    color: #777777;
+    font-size: 13px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">OMNINX</div>
+
+    <div class="tagline">
+        KNOWLEDGE BEYOND LIMITS
+    </div>
+
+    <form class="search-box" id="searchForm">
+        <input
+            type="search"
+            id="query"
+            placeholder="Search the web with OMNINX..."
+            required
+        >
+        <button type="submit">Search</button>
+    </form>
+
+    <div class="note">
+        Independent Search Engine Project
+    </div>
+
+</div>
+
+<script>
+document.getElementById("searchForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const query = document.getElementById("query").value.trim();
+
+    if (query) {
+        alert("OMNINX SEARCH: Search backend is under development.");
+    }
+});
+</script>
+
+</body>
+</html>
