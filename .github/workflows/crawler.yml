@@ -20,6 +20,9 @@ jobs:
       - name: Run OMNINX Crawler
         run: python crawler.py
 
+      - name: Test OMNINX Search
+        run: python search.py python
+
       - name: Upload Search Index
         uses: actions/upload-artifact@v4
         with:
