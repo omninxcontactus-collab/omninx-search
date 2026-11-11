@@ -1,0 +1,28 @@
+
+name: OMNINX SEARCH CRAWLER
+
+'on':
+  workflow_dispatch:
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout OMNINX
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run OMNINX Crawler
+        run: python crawler.py
+
+      - name: Upload Search Index
+        uses: actions/upload-artifact@v4
+        with:
+          name: omninx-search-index
+          path: index.jsonl
+          if-no-files-found: warn
